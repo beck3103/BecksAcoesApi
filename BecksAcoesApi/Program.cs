@@ -15,6 +15,7 @@ builder.Services.AddSwaggerGen();
 //Configuration Binding
 builder.Services.Configure<FundamentusOptions>(builder.Configuration.GetSection("Fundamentus"));
 
+builder.Services.RegisterAuthentication();
 builder.Services.RegisterServices();
 
 builder.Services.AddHttpClient<IFundamentusHttpClient, FundamentusHttpClient>("FundamentusClient", client =>
