@@ -1,11 +1,8 @@
 ﻿using Application.Dtos.Output;
 using Application.Interfaces;
-using Application.Dtos;
+using Application.Mappers;
 using HtmlAgilityPack;
 using Infra.Http.Interfaces;
-using System.Net.Sockets;
-using System.Text.Json;
-using Application.Mappers;
 
 namespace Application.AppServices;
 

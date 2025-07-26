@@ -14,8 +14,4 @@
     <ProjectReference Include="..\Infra.Http\Infra.Http.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dtos\Input\" />
-  </ItemGroup>
-
 </Project>

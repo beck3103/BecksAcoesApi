@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Infra;
 
-public static class ServicesRegistration
+public static class ServicesRegister
 {
     public static void RegisterServices(this IServiceCollection services)
     {
@@ -18,5 +18,6 @@ public static class ServicesRegistration
         services.AddScoped<IFundamentusHttpClient, FundamentusHttpClient>();
 
     private static void RegisterAppServices(this IServiceCollection services) =>
-        services.AddScoped<IFundamentusAppService, FundamentusAppService>();
+        services.AddScoped<IAuthenticationAppService, AuthenticationAppService>()
+                .AddScoped<IFundamentusAppService, FundamentusAppService>();
 }
