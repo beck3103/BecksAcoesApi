@@ -24,7 +24,7 @@ public class AuthController(IAuthenticationAppService authenticationAppService) 
 
         var claims = new[]
             {
-                new Claim("Ordinary", "EveryoneButTheOwner")
+                new Claim(ClaimTypes.Role, "user")
             };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("myDefaultSuperSecretKeyabcdefghi"));
