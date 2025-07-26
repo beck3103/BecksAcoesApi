@@ -1,6 +1,8 @@
-﻿namespace Application.Interfaces;
+﻿using Application.Dtos.Output;
+
+namespace Application.Interfaces;
 
 public interface IFundamentusAppService
 {
-    Task<string> GetFundamentusDataAsync(string ticket);
+    Task<FundamentusRowResultDto?> GetFundamentusDataAsync(string ticket);
 }
