@@ -9,6 +9,7 @@ public static class AuthenticationRegister
 {
     public static void RegisterAuthentication(this IServiceCollection services)
     {
+
         // Add JWT authentication
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
