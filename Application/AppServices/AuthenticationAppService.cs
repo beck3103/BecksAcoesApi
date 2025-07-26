@@ -8,6 +8,6 @@ public sealed class AuthenticationAppService : IAuthenticationAppService
     // Example method to authenticate a user
     public bool Authenticate(LoginDto loginDto)
     {
-        return true;
+        return loginDto != null;
     }
 }

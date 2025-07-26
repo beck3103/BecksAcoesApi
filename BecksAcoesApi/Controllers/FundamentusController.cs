@@ -4,11 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BecksAcoesApi.Controllers;
 
-[Authorize]
+
 [ApiController]
 [Route("api/[controller]")]
 public sealed class FundamentusController(IFundamentusAppService fundamentusAppService) : ControllerBase
 {
+    [Authorize]
     [HttpGet("fundamentus/{ticket}")]
     public async Task<IActionResult> GetFundamentusData(string ticket)
     {
